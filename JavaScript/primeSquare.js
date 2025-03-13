@@ -3,9 +3,8 @@
  * 1 <= a,b <= 10^18
  */
 function primeSquare(a,b){
-    let mod = 1e9+7;
-    let diff = (a+b)*(a-b)%mod;
-    return isPrime(diff);
+    if(a - b != 1)  return false;
+    return isPrime(a + b);
 }
 
 function isPrime(n){
